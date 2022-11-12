@@ -25,7 +25,7 @@ body{
 
 body::before{
   content: "";
-  /* position: fixed; */
+  position: fixed;
   /* background-image: url("Avatar 2000x2098.jpg"); */
   /* background-color: rgb(var(--fourth-color));  /*url("Ace.png") top right no-repeat; /*add  url("") top right no-repeat img */
   /* background-image: url("Ace.png") ; */
@@ -34,6 +34,7 @@ body::before{
 
   left: 0;
   background-size: cover;
+
   right: 0;
   top: 0;
   height: 100vh;
@@ -122,7 +123,7 @@ h1,h2,h3,h4,h5.h6{
   background-repeat: no-repeat;
   /* background-position: right; */
   /* background-size: cover; */
-  background-position: 50% 10px;
+  background-position: 50% 15px;
   /* background-size: 24%; */
   background-size: 20vh;
 }
@@ -213,7 +214,7 @@ h1,h2,h3,h4,h5.h6{
 .about-me{
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
-  padding: 10px 10px;
+  /* padding: 10px 0px; */
 }
 
 .about-me .contact h3 {
@@ -245,6 +246,10 @@ h1,h2,h3,h4,h5.h6{
   width: 70%;
 }
 
+.section-title h2{
+  padding-top: 20px;
+}
+
 
 .avatar{
   border-radius: 20px;
@@ -270,8 +275,6 @@ h1,h2,h3,h4,h5.h6{
   margin: 30px 0;
 }
 
-
-
 .skills{
   background-color: rgb(var(--first-color),0.8);
   border-radius: 10px;
@@ -284,10 +287,13 @@ h1,h2,h3,h4,h5.h6{
 }
 
 .skill p{
-  font-size: 26px;
+  /* font-size: 26px; */
+  font-size: 16px;
   padding: 5px;
   color: rgb(var(--third-color));
 }
+
+
 
 /*icon react*/
 .fa-react{
@@ -472,6 +478,10 @@ footer{
   .header-background{
     background-position: 95% 50%;
     background-size: 25%;
+  }
+
+  .skill p {
+    font-size: 26px;
   }
   
 }
