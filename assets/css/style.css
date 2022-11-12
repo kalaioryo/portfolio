@@ -1,0 +1,498 @@
+:root{
+  --first-color: 228, 241, 254;
+  --second-color: 140, 198, 255;
+  --third-color: 34, 49, 63;
+  --fourth-color: 52, 73, 94;
+}
+
+.legend-color{
+  color: rgb(228, 241, 254);  /*first-color*/
+  color: rgb(140, 198, 255);  /*second-color*/
+  color: rgb(34, 49, 63);  /*third-color*/
+  color: rgb(52, 73, 94);  /*fourth-color*/
+}
+
+/* ############  global  ################*/
+body{
+  font-family: sans-serif;
+  background-color: rgb(var(--fourth-color));
+  color: rgb(var(--first-color));
+  position: relative;
+  background: rgb(var(--fourth-color));
+}
+
+body::before{
+  content: "";
+  position: fixed;
+  /* background-image: url("Avatar 2000x2098.jpg"); */
+  /* background-color: rgb(var(--fourth-color));  /*url("Ace.png") top right no-repeat; /*add  url("") top right no-repeat img */
+  /* background-image: url("Ace.png") ; */
+  background-image: url("../img/sfondo-triangle.jpg") ;
+  opacity: 0.1;
+
+  left: 0;
+  background-size: cover;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  z-index: -1;
+}
+
+a{
+  color: rgb(var(--second-color));
+  text-decoration: none;
+}
+
+a:hover{
+  color: rgb(var(--first-color));
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5.h6{
+  font-family: sans-serif;
+}
+
+/*#####################  header   #################*/
+
+#nav{
+  /* height: 10vh; */
+  z-index: 999;
+  background-color: rgb(var(--third-color));
+  color: rgb(var(--first-color));
+}
+
+
+#nav a{
+  position: relative;
+  display: block;
+}
+
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  bottom: 4px;
+  left: 3;
+  background-color: rgb(var(--second-color)) !important;
+  transition: all 0.3s ease-in-out 0s;
+  visibility: hidden;
+}
+
+.nav-item a:hover::before,
+.nav-item li:hover > a::before,
+.nav-item .active > a::before  {
+  visibility: visible;
+  width: 25px;
+}
+
+#nav a:hover,
+#nav .active > a,
+#nav li:hover > a {
+  text-decoration: none;
+}
+
+.navbar-light a{
+  color: rgb(var(--first-color)) !important;
+}
+
+.navbar-light a:hover{
+  color: rgb(var(--second-color)) !important;
+}
+
+ .navbar-toggler{
+  color: rgba(var(--fourth-color),0.1) !important;
+}
+
+
+.bars-icon{
+  color: rgb(var(--first-color), 0.8);
+}
+
+.bars-icon:hover{
+  color: rgb(var(--second-color), 0.8);
+}
+
+.header-background{
+  background-image: url("../img/test4.svg");
+  background-color: rgb(var(--third-color), 0.5);
+  
+  background-repeat: no-repeat;
+  /* background-position: right; */
+  /* background-size: cover; */
+  background-position: 50% 101%;
+  background-size: 24%;
+}
+
+#header {
+  transition: ease-in-out 0.3s;
+  position: relative;
+  margin-top: 9vh;
+  height: 91vh;
+  display: flex;
+  align-items: center;
+  z-index: 997;
+  overflow-y: auto;
+}
+
+#header * {
+  transition: ease-in-out 0.3s;
+}
+
+#header h1 {
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+#header h1 a,
+#header h1 a:hover {
+  color: rgb(var(--first-color));
+  line-height: 1;
+  display: inline-block;
+}
+
+#header h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  line-height: 30px;
+  color: rgba(var(--first-color),0.8);
+}
+
+#header h2 span {
+  color: rgb(var(--first-color));
+  border-bottom: 2px solid rgb(var(--second-color));
+  padding-bottom: 6px;
+}
+
+#header h2 span:hover {
+  border-bottom: 2px solid rgb(var(--third-color));
+  padding-bottom: 6px;
+}
+
+#header .social-links {
+  margin-top: 15px;
+  display: flex;
+}
+
+#header .social-links a {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(11, 14, 19, 0.1);   /*change color */
+  color: rgb(var(--first-color));
+  line-height: 1;
+  margin-right: 8px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+#header .social-links a:hover {
+  background-color: rgb(var(--second-color));
+}
+/*warning*/
+#header .container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*##############  About ##############*/
+.about {
+  padding-top: 70px;
+}
+
+.about-me{
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 10px 10px;
+}
+
+.about-me .contact h3 {
+  font-weight: 700;
+  font-size: 26px;
+  color: rgb(var(--first-color));
+}
+
+.about-me .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-me .content ul li {
+  padding-bottom: 10px;
+}
+
+/* .about-me .content ul i {
+  font-size: 20px;
+  padding-right: 2px;
+  color: rgb(var(--second-color));
+} */
+
+.about-me .content p:last-child {
+  margin-bottom: 0;
+}
+
+.avatar-container{
+  width: 70%;
+}
+
+
+.avatar{
+  border-radius: 20px;
+  object-fit: cover;
+  width: 100%;
+  margin: 20px 20%;
+  /* height: 500 px; */
+  
+  /* border: 1px red solid; */
+}
+
+/*######### Skills Section #####*/
+
+.skills-title{
+  margin: 30px 0;
+}
+
+.front-end-skills{
+  margin: 30px 0;
+}
+
+.other-skills{
+  margin: 30px 0;
+}
+
+
+
+.skills{
+  background-color: rgb(var(--first-color),0.8);
+  border-radius: 10px;
+  padding-top: 50px;
+}
+
+.skill {
+  text-align: center;
+  /* font-size: 26px; */
+}
+
+.skill p{
+  font-size: 26px;
+  padding: 10px;
+  color: rgb(var(--third-color));
+}
+
+/*icon react*/
+.fa-react{
+  color: #01d0fb;
+}
+
+/*icon redux*/
+[data-icon="simple-icons:redux"]{
+  color: #6b49af;
+  font-size: 75px;
+}
+
+/*icon html*/
+[data-icon="vscode-icons:file-type-html"]{
+  font-size: 75px;
+}
+
+/*icon css3*/
+[data-icon="uiw:css3"]{
+  color:#1571b5;
+  font-size: 75px;
+}
+
+/*icon bootstrap*/
+.fa-bootstrap{
+  color: #7811f7;
+}
+
+/*icon sass*/
+[data-icon="logos:sass"]{
+  font-size: 75px;
+}
+
+/*icon javascript*/
+[data-icon="vscode-icons:file-type-js-official"]{ 
+  font-size: 75px;
+}
+
+/*icon webpack*/
+[data-icon="logos:webpack"]{
+  font-size: 75px;
+}
+
+/*icon npm*/
+.fa-npm{
+  color: red;
+}
+
+/*icon git*/
+[data-icon="logos:git-icon"]{
+  font-size: 75px;
+}
+/*####### Portfolio section ######*/
+
+.portfolio-title{
+  padding: 60px 0;
+}
+
+.portfolio p,
+.portfolio h5{
+  color: rgb(var(--fourth-color));
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.btn-primary {
+  /* color: #fff; */
+  /* color: black !important; */
+  color: rgb(var(--second-color));
+  background-color: rgb( var(--third-color) );
+  border-color: rgb( var(--third-color) );
+}
+
+.btn-primary:hover {
+  color: rgb( var(--third-color) );
+  background-color: rgb(var(--second-color));
+  border-color: rgb(var(--second-color));
+}
+
+/* .button-card{
+  display: flex;
+  align-self: flex-end;
+  justify-content: end;
+  align-items: stretch;
+} */
+
+/*#### footer ####*/
+
+footer{
+  margin-top: 30px;
+  /* background-color: rgb(var(--third-color)) !important; */
+
+}
+
+.bg-light{
+    background-color: rgb(var(--third-color)) !important;
+}
+
+/* .copyright{
+  background-color: rgb(var(--fourth-color)) !important;
+
+} */
+
+/*######### Project page ########*/
+
+.header-project{
+  margin-top: 11vh;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.container-carousel{
+  margin: auto;
+  width: 90vw;
+}
+
+.carousel-inner :only-child{
+  margin: auto;
+}
+
+.text-other-page{
+  border: none;
+  margin-bottom: 60px;
+  background-color: rgb( var(--third-color) );
+  margin: 5% auto;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center ; */
+}
+
+.text-other-page p {
+  margin: 10px 2%;
+  font-size: 18px;
+  line-height: 28px;
+  max-width: 800px;
+  /* text-align: left; */
+}
+
+.link-project{
+  text-decoration: none;
+  /* color: #76b1f8; */
+  background-color: rgb( var(--fourth-color) );
+  padding: 5px;
+  /* box-shadow: 0px 0px 20px #76b1f8; */
+  border-radius: 5px;
+}
+
+.link-project:hover{
+  background-color: rgb( var(--second-color) );
+  color: rgb( var(--fourth-color) );
+}
+
+/*##### scrollbar #####*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb( var(--fourth-color) );
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb( var(--second-color) );
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb( var(--first-color) )
+}
+
+
+
+/*############ Media query ##############*/
+
+@media (min-width: 660px){
+
+  .header-background{
+    background-position: 95% 50%;
+    background-size: 25%;
+  }
+  
+}
+
+@media (min-width: 992px) {
+  #header h1 {
+    font-size: 48px;
+  }
+
+  #header h2 {
+    font-size: 24px;
+  }
+
+  #header .social-links {
+    margin-top: 40px;
+  }
+
+  #header .container{
+    align-items: start;
+  }
+}
