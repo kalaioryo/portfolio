@@ -410,6 +410,11 @@ footer{
   margin: auto;
 }
 
+.carousel-inner img{
+  max-width: 100%;
+  height: auto;
+}
+
 .text-other-page{
   border: none;
   margin-bottom: 60px;
