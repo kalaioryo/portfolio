@@ -19,6 +19,8 @@ body{
   color: rgb(var(--first-color));
   position: relative;
   background: rgb(var(--fourth-color));
+  height: 100vh;
+
 }
 
 body::before{
@@ -128,8 +130,8 @@ h1,h2,h3,h4,h5.h6{
 #header {
   transition: ease-in-out 0.3s;
   position: relative;
-  margin-top: 9vh;
-  height: 91vh;
+  margin-top: 8vh;
+  height: 92vh;
   display: flex;
   align-items: center;
   z-index: 997;
@@ -283,7 +285,7 @@ h1,h2,h3,h4,h5.h6{
 
 .skill p{
   font-size: 26px;
-  padding: 10px;
+  padding: 5px;
   color: rgb(var(--third-color));
 }
 
