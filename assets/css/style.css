@@ -288,7 +288,7 @@ h1,h2,h3,h4,h5.h6{
 
 .skill p{
   /* font-size: 26px; */
-  font-size: 16px;
+  font-size: 20px;
   padding: 5px;
   color: rgb(var(--third-color));
 }
