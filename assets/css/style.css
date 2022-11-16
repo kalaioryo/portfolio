@@ -368,7 +368,7 @@ h1,h2,h3,h4,h5.h6{
   /* color: black !important; */
   color: rgb(var(--second-color));
   background-color: rgb( var(--third-color) );
-  border-color: rgb( var(--third-color) );
+  border-color: rgb( var(--second-color) );
 }
 
 .btn-primary:hover {
@@ -383,6 +383,31 @@ h1,h2,h3,h4,h5.h6{
   justify-content: end;
   align-items: stretch;
 } */
+
+/*##### contact #####*/
+
+.contact-section{
+  margin: 30px 0px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* text-align: center; */
+}
+
+.email-container{
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 40px 0px;
+
+}
+
+.email-container a{
+  font-size: 26px;
+  border-radius: 15px;
+}
+
+
 
 /*#### footer ####*/
 
