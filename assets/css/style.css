@@ -377,6 +377,16 @@ h1,h2,h3,h4,h5.h6{
   border-color: rgb(var(--second-color));
 }
 
+.btn-primary:active{
+  color: rgb( var(--third-color) );
+  background-color: rgb(var(--second-color));
+}
+
+.btn-primary:visited{
+  color: rgb(var(--second-color));
+  background-color: rgb( var(--third-color) );
+}
+
 /* .button-card{
   display: flex;
   align-self: flex-end;
