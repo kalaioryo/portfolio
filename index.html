@@ -10,9 +10,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets\img\favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets\img\favicon-16x16.png">
 
+  <script src="assets/js/index.js"></script>
+
   <!--iconify-->
 
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <script type="text/javascript" src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
   
  <!-- google font-->
 
@@ -24,6 +26,16 @@
 
  <!-- main css-->
  <link rel="stylesheet" href="assets/css/style.css">
+
+ <!-- sdk emailjs -->
+ <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("_mSfKIWTPCP2YGFOR");
+   })();
+</script>
 
 </head>
 <body>
@@ -127,7 +139,6 @@
             <div class="col-lg-6">
               <ul>
                 <li><strong>età:</strong> 32</li>
-                <li><strong>email:</strong> kalaioryo@gmail.com</li>
               </ul>              
             </div>
           </div>
@@ -239,7 +250,7 @@
   <section id="portfolio" class="portfolio">
     <div class="container">
       <h2 class="portfolio-title">Portfolio</h3>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
           <div class="col">
             <div class="card h-100">
               <img src="assets\img/card-img/webpage.png" class="card-img-top" alt="card-project">
@@ -291,11 +302,44 @@
   <section id="contact" class="contact-section">
     <div class="container">
       <h2 class="contact-title">Contact</h2>
-      <div class="email-container">
-        <a href="mailto:kalaioryo@gmail.com" class="btn btn-primary type="email">kalaioryo@gmail.com</a>
+      
+      <div class="container border mt-3 bg-light py-3" >
+        <div class="row">
+          <h1 class="px-3 ">Contattami</h1>
+          <div class="col-md-6 px-3">
+            <!-- <h1>Contattami</h1> -->
+            <h5>Puoi contattarmi per email</h4>
+            <div class="email-container">
+              <a href="mailto:kalaioryo@gmail.com" class="btn btn-primary" type="email">
+                <i class="iconify" data-icon="material-symbols:mail-outline"></i>
+              </a>
+            </div>
+            <h5>Oppure complilare il form</h4>
+          </div>
+          <div class="col-md-6 px-3">
+            <!-- <h1>Contact form</h1> -->
+            <div class="form-group">
+              <h5 for="name">Name</h5>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <h5 for="email">Email</h5>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <h5 for="message">Message</h5>
+              <textarea id="message" rows="3" class="form-control"></textarea>
+            </div>
+            <button class="btn btn-primary" onclick="sendMail()">submit</button>
+            
+          </div>
+
+        </div>
       </div>
-              
+      
     </div>
+
+    
   </section>
   
   <footer class="bg-light text-center text-white">
@@ -349,6 +393,5 @@
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-  <script src="assets/js/main.js"></script>
 </body>
 </html>

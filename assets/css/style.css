@@ -346,6 +346,9 @@ h1,h2,h3,h4,h5.h6{
 [data-icon="logos:git-icon"]{
   font-size: 75px;
 }
+
+/* icon email in contact section */
+
 /*####### Portfolio section ######*/
 
 .portfolio-title{
@@ -364,8 +367,6 @@ h1,h2,h3,h4,h5.h6{
 }
 
 .btn-primary {
-  /* color: #fff; */
-  /* color: black !important; */
   color: rgb(var(--second-color));
   background-color: rgb( var(--third-color) );
   border-color: rgb( var(--second-color) );
@@ -382,34 +383,27 @@ h1,h2,h3,h4,h5.h6{
   background-color: rgb(var(--second-color));
 }
 
-.btn-primary:visited{
-  color: rgb(var(--second-color));
-  background-color: rgb( var(--third-color) );
-}
-
-/* .button-card{
-  display: flex;
-  align-self: flex-end;
-  justify-content: end;
-  align-items: stretch;
-} */
-
 /*##### contact #####*/
 
 .contact-section{
   margin: 30px 0px;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* text-align: center; */
+}
+
+.contact-section h5,
+.contact-section h4{
+  padding: 0.7em 0em;
+}
+
+.contact-section button{
+  margin-top: 1.5em;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .email-container{
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
-  padding: 40px 0px;
-
+  padding: 20px 0px;
 }
 
 .email-container a{
@@ -418,6 +412,10 @@ h1,h2,h3,h4,h5.h6{
 }
 
 
+/* Icon email */
+[data-icon="material-symbols:mail-outline"]{
+  font-size: 75px;
+}
 
 /*#### footer ####*/
 
